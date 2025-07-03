@@ -31,7 +31,35 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-//animation
+//animation Developer
+const phrases = ["junior", "Frontend", "Developer"];
+  const el = document.getElementById("typed-text");
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    el.textContent = currentPhrase.substring(0, letterIndex);
+
+    if (!isDeleting && letterIndex < currentPhrase.length) {
+      letterIndex++;
+      setTimeout(type, 120);
+    } else if (isDeleting && letterIndex > 0) {
+      letterIndex--;
+      setTimeout(type, 60);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+      setTimeout(type, 1000);
+    }
+  }
+
+  type();
+
+//animation skilss
 document.addEventListener('DOMContentLoaded', () => {
   const skillsSection = document.getElementById('skills');
   const bars = document.querySelectorAll('.Technical-bars .bar .progress-line span');
@@ -61,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(skillsSection);
 });
 
+//message
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
 
@@ -75,10 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.text())
       .then((data) => {
-        // ✅ แสดง popup
+        // แสดง popup
         alert("Sent successfully.!");
 
-        // ✅ ล้างฟอร์ม
+        // ล้างฟอร์ม
         form.reset();
       })
       .catch((error) => {
