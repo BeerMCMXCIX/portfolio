@@ -962,22 +962,56 @@ transform: scale(1.05);
     .experience-timeline::after {
         left: 31px;
     }
+    
     .exp-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 15px;
     }
+
     .exp-item:nth-child(even) {
         left: 0;
     }
+
     .exp-dot {
         left: 22.5px;
     }
+
     .exp-date {
         left: 70px;
         right: auto;
     }
-    
+
+    .exp-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .exp-item {
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .experience-items::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .exp-date {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* --- ปรับแก้ Contact Form และ Footer สำหรับจอเล็ก --- */
