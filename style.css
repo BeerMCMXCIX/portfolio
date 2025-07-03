@@ -230,9 +230,12 @@ section {
 }
 
 @keyframes blink {
-    to {
-        background-color: transparent;
-    }
+    0%, 100% { 
+    opacity: 1;
+}
+    50% { 
+    opacity: 0; 
+}
 }
 
 /*EDUCATION*/
@@ -961,6 +964,10 @@ transform: scale(1.05);
     .exp-date {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .cursor {
+        font-size: 3rem;
     }
 }
 
