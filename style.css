@@ -685,63 +685,48 @@ section {
     }
 }
 
-/*SEVICES*/
-.services {
+/*Certificates*/
+.certificates {
     background-color: #0a192f;
-    color: white;
+    padding-bottom: 10rem;
 }
 
-.services h2 {
-    margin-bottom: 5rem;
-    color: white;
-}
-
-.services-container {
+.certificates-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: stretch;
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr); /* สร้าง Layout 2 คอลัมน์ */
+    gap: 4rem; /* ระยะห่างระหว่าง Certificate */
+    align-items: start;
 }
 
-.service-box {
-    background: aqua;
-    min-height: 500px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    overflow: auto;
-}
-
-.service-box:hover {
-    background-color: #0a192f;
-    color: white;
-    border: 5px solid aqua;
-    transform: scale(1.03);
-}
-
-.service-box .service-info {
+.certificate-item {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    justify-content: left;
-    align-items: baseline;
-    padding: 5rem;
+    align-items: center;
+    gap: 1.5rem; /* ระยะห่างระหว่างรูปกับชื่อ */
 }
 
-.service-info h4{
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 2;
+.certificate-item img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-info p {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.7;
-    margin: auto;
+.certificate-item a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
 }
 
+.certificate-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+/*CONTACT*/
 .contact {
     background-color: #0a192f;
 
@@ -869,10 +854,6 @@ section {
         padding: 10rem 3% 2rem; /* ลดระยะห่างของ Section */
     }
 
-    .services {
-        padding-bottom: 7rem;
-    }
-
     .footer {
         padding: 2rem 3%;
     }
@@ -929,18 +910,6 @@ section {
         /*Skills*/
     .skills {
         grid-template-columns: 1fr;
-    }
-
-    /* --- Services Section --- */
-    .services h2 {
-        margin-bottom: 3rem;
-    }
-    .services-container {
-        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ */
-    }
-
-    .service-box {
-        min-height: auto; /* ให้ความสูงยืดหยุ่นตามเนื้อหา */
     }
 }
 
@@ -1029,6 +998,11 @@ section {
     /*Project*/
     .projects-items {
         grid-template-columns: 1fr;
+    }
+
+    /*certificates*/
+    .certificates-container {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์บนจอเล็ก */
     }
 }
 
